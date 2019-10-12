@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 # cascade classifier
-
+# address to classifier file , change accordingly
 face_classifier = cv2.CascadeClassifier('C:/Users/SUMITN~1/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/cv2/data/haarcascade_frontalface_default.xml')
 
 
@@ -29,7 +29,7 @@ while True:   # will provide web cam feed to the face_extractor function
         count += 1
         face = cv2.resize(face_extractor(frame), (200, 200), )   # will lower the resolution of image
         face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
-
+        # path to folder where all images will be stored , change accordingly
         file_name_path = 'C:/Users/Sumit Negi/Documents/Python Scripts/facial recognition/facedata/face'+str(count)+'.jpg'  # location for face data
         cv2.imwrite(file_name_path, face)
         cv2.putText(face, str(count), (50, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 2)
