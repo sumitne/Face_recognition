@@ -57,7 +57,7 @@ while True:
             cv2.imshow('Face Cropper', image)
 
         else:
-            cv2.putText(image, "Locked", (250, 450), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+            cv2.putText(image, "Face Not Found", (250, 450), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
             cv2.imshow('Face Cropper', image)
 
     except:
